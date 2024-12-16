@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="400dp"
+    android:layout_height="600dp"
+    android:layout_gravity="center_horizontal"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/inputKuraName"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        style="@style/EditTextStyle"
+        android:textSize="30sp"
+        android:hint="@string/kura_name_hint"
+        android:inputType="textPersonName|text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="てすと"/>
+
+    <TextView
+        android:id="@+id/inputKuraYomiganaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|end"
+        style="@style/TextStyle.Mid"
+        app:layout_constraintTop_toTopOf="@id/inputKuraYomigana"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/kura_yomi_label"/>
+    <EditText
+        android:id="@+id/inputKuraYomigana"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        style="@style/EditTextStyle"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:hint="@string/kura_yomi_hint"
+        app:layout_constraintTop_toBottomOf="@id/inputKuraName"
+        app:layout_constraintStart_toEndOf="@id/inputKuraYomiganaLabel"
+        app:layout_constraintEnd_toEndOf="@id/inputKuraName"
+        tools:text="よみ"/>
+
+    <TextView
+        android:id="@+id/prefectureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        style="@style/TextStyle.Mid"
+        android:gravity="center_vertical|start"
+        app:layout_constraintTop_toTopOf="@id/prefectureSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/kura_prefecture_label"/>
+    <Spinner
+        android:id="@+id/prefectureSpinner"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        style="@style/EditTextStyle"
+        app:layout_constraintTop_toBottomOf="@id/inputKuraYomigana"
+        app:layout_constraintStart_toEndOf="@id/prefectureLabel"
+        app:layout_constraintEnd_toStartOf="@id/kuraSaveButton"/>
+
+    <Button
+        android:id="@+id/kuraSaveButton"
+        style="@style/ButtonStyle.NormalButton"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:text="@string/kura_save_button"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/prefectureSpinner" />
+
+
+    <ListView
+        android:id="@+id/kuraList"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:foregroundGravity="top"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kuraSaveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

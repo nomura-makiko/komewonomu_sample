@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="SelectPointViewAttrs">
+        <attr name="pointValue" format="integer" />
+    </declare-styleable>
+</resources>

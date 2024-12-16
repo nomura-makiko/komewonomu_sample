@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">米を飲む</string>
+
+    <string name="blank"> </string>
+    <!-- 画面遷移用キー -->
+    <string name="navigator_argument_key_sake_info_type">SakeInfoType</string>
+
+    <!-- Home -->
+    <string name="top_button_record">メモる</string>
+    <string name="top_button_record_list">一覧を見る</string>
+    <string name="top_recently_list_label">最近飲んだお酒</string>
+    <string name="top_recently_list_more_text">＞＞もっと見る</string>
+    <string name="top_favorite_list_label">最近飲んだお酒</string>
+    <string name="top_favorite_list_more_text">＞＞好みチャート</string>
+
+    <!-- 情報入力画面 -->
+    <string name="input_info_register_success_toast">%1$sを登録しました</string>
+    <string name="input_info_update_success_toast">%1$sを更新しました</string>
+    <string name="input_info_toast_validation">お酒の名前か写真がないと 後でわからなくなるよ！</string>
+    <string name="input_info_hint_sake_name">お酒の名前</string>
+    <string name="input_info_hint_kura_name">タップして蔵を入力</string>
+    <string name="input_info_hint_memo">感想・メモ</string>
+    <string name="input_info_hint_place_name">場所</string>
+    <string name="input_info_kura_label">蔵：</string>
+    <string name="input_info_star_point_label">評価：</string>
+    <string name="input_info_place_label">飲んだ場所：</string>
+    <string name="input_info_juicy_point_label_min">淡</string>
+    <string name="input_info_juicy_point_label_max">芳</string>
+    <string name="input_info_sweet_point_label_min">辛</string>
+    <string name="input_info_sweet_point_label_max">甘</string>
+    <string name="input_info_rich_point_label_min">薄</string>
+    <string name="input_info_rich_point_label_max">濃</string>
+    <string name="input_info_scent_point_label_min">穏</string>
+    <string name="input_info_scent_point_label_max">華</string>
+    <string name="input_info_save_button_label">保存する</string>
+    <string name="input_info_temp_button_label">あとで</string>
+
+    <!-- 酒リスト -->
+    <string name="sake_list_tab_name_chart">チャート図</string>
+    <string name="sake_list_tab_name_list">リスト</string>
+    <string name="sake_list_button_star_point_label">評価：</string>
+
+    <!-- 下書き一覧 -->
+    <string name="temp_list_title">下書き中の一覧</string>
+
+    <!-- 酒カード -->
+    <string name="sake_info_card_start_point_label">好き：</string>
+
+    <!-- 酒詳細画面 -->
+    <string name="no_name">(none)</string>
+    <string name="sake_detail_info_edit_button_label">編集する</string>
+    <string name="sake_detail_info_delete_button_label">削除</string>
+    <string name="sake_detail_info_star_point_label">評価：</string>
+    <string name="sake_detail_info_no_point_text">(no point)</string>
+    <string name="sake_detail_info_juicy_point_label">淡麗/芳醇：</string>
+    <string name="sake_detail_info_sweet_point_label">辛口/甘口：</string>
+    <string name="sake_detail_info_rich_point_label">旨味：</string>
+    <string name="sake_detail_info_scent_point_label">香り：</string>
+    <string name="sake_detail_info_delete_confirm_dialog_message">データを削除しますか？復元することはできません。</string>
+    <string name="sake_detail_info_delete_confirm_dialog_positive_button">削除する</string>
+    <string name="sake_detail_info_delete_confirm_dialog_negative_button">やめる</string>
+    <string name="sake_detail_info_deleted_info">%1$sを削除しました</string>
+
+    <!-- 酒ランク -->
+    <string name="sake_rank_junmai_daigin">純米大吟醸</string>
+    <string name="sake_rank_dai_ginjou">大吟醸</string>
+    <string name="sake_rank_junmai_ginjou">純米吟醸</string>
+    <string name="sake_rank_junmai">純米</string>
+    <string name="sake_rank_ginjou">吟醸</string>
+    <string name="sake_rank_tokubetu_junmai">特別純米</string>
+    <string name="sake_rank_honjouzou">本醸造</string>
+    <string name="sake_rank_other">その他</string>
+
+    <!-- 酒タイプ -->
+    <string name="sake_type_nama">生</string>
+    <string name="sake_type_gensyu">原酒</string>
+    <string name="sake_type_nigori">にごり</string>
+    <string name="sake_type_kimoto">生酛</string>
+    <string name="sake_type_sizuku_tori">雫取り</string>
+    <string name="sake_type_happou">発泡</string>
+    <string name="sake_type_yamahai">山廃</string>
+    <string name="sake_type_kosyu">古酒</string>
+    <string name="sake_type_kijousyu">貴醸酒</string>
+    <string name="sake_type_hiyaorosi">ひやおろし</string>
+
+    <!-- 蔵選択ダイアログ -->
+    <string name="kura_save_button">決定</string>
+    <string name="kura_name_hint">蔵名</string>
+    <string name="kura_yomi_label">読み：</string>
+    <string name="kura_yomi_hint">よみがな</string>
+    <string name="kura_prefecture_label">都道府県：</string>
+    <string name="kura_register_error_toast">蔵の設定には、名前とよみがな、都道府県の入力が必要です</string>
+    <string name="kura_register_success_toast">蔵 %1$s を新規登録しました</string>
+    <string name="kura_updated_prefecture_toast">%1$sの情報を更新しました</string>
+
+</resources>

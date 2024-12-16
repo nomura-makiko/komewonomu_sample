@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="5dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/point_1"
+            style="@style/SelectPointView"
+            android:text="1"/>
+
+        <Button
+            android:id="@+id/point_2"
+            style="@style/SelectPointView"
+            android:text="2" />
+        <Button
+            android:id="@+id/point_3"
+            style="@style/SelectPointView"
+            android:text="3" />
+        <Button
+            android:id="@+id/point_4"
+            style="@style/SelectPointView"
+            android:text="4" />
+        <Button
+            android:id="@+id/point_5"
+            style="@style/SelectPointView"
+            android:text="5" />
+
+    </LinearLayout>
+</merge>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/titleImageView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/recordButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="5dp"
+        style="@style/ButtonStyle.MainButton"
+        android:background="@drawable/input_sake_button_background"
+        app:layout_constraintTop_toBottomOf="@id/titleImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/showListButton"
+        android:text="@string/top_button_record"/>
+
+    <Button
+        android:id="@+id/showListButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="5dp"
+        style="@style/ButtonStyle.MainButton"
+        android:background="@drawable/sake_list_button_background"
+        app:layout_constraintTop_toBottomOf="@id/titleImageView"
+        app:layout_constraintStart_toEndOf="@id/recordButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/top_button_record_list"/>
+
+    <TextView
+        android:id="@+id/recentlyListLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        style="@style/TextStyle.Large.Bold"
+        app:layout_constraintTop_toBottomOf="@id/recordButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/top_recently_list_label"/>
+
+    <TextView
+        android:id="@+id/recentlyListMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        style="@style/TextStyle.Mid"
+        app:layout_constraintTop_toTopOf="@id/recentlyListLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/top_recently_list_more_text"/>
+
+    <LinearLayout
+        android:id="@+id/recentlyListView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/recentlyListLabel"
+        tools:background="@android:color/holo_green_light">
+        <com.aquajusmin.sakewonomu.viewitems.SakeInfoCardView
+            android:id="@+id/recentlyInfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.aquajusmin.sakewonomu.viewitems.SakeInfoCardView
+            android:id="@+id/recentlyInfo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.aquajusmin.sakewonomu.viewitems.SakeInfoCardView
+            android:id="@+id/recentlyInfo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/favoriteListLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        style="@style/TextStyle.Large.Bold"
+        app:layout_constraintTop_toBottomOf="@id/recentlyListView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/top_favorite_list_label" />
+
+    <TextView
+        android:id="@+id/favoriteListMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        style="@style/TextStyle.Mid"
+        app:layout_constraintTop_toTopOf="@id/favoriteListLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/top_favorite_list_more_text" />
+
+    <LinearLayout
+        android:id="@+id/favoriteListView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/favoriteListLabel"
+        tools:background="@android:color/holo_green_light">
+        <com.aquajusmin.sakewonomu.viewitems.SakeInfoCardView
+            android:id="@+id/favoriteInfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.aquajusmin.sakewonomu.viewitems.SakeInfoCardView
+            android:id="@+id/favoriteInfo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.aquajusmin.sakewonomu.viewitems.SakeInfoCardView
+            android:id="@+id/favoriteInfo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

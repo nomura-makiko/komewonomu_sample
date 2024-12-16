@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.aquajusmin.sakewonomu.detail.SakeDetailInfoViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/recordDate"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            style="@style/TextStyle.Mid"
+            android:text="@{viewModel.date}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="2023/01/01"/>
+
+        <TextView
+            android:id="@+id/kuraName"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:scrollbars="horizontal"
+            android:gravity="center_vertical"
+            style="@style/TextStyle.Large.Bold"
+            android:text="@{viewModel.kuraName}"
+            app:layout_constraintTop_toBottomOf="@id/recordDate"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="くらのなまえ"/>
+
+        <TextView
+            android:id="@+id/prefectureName"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="@{viewModel.prefecturesName}"
+            style="@style/TextStyle.Mid"
+            app:layout_constraintTop_toTopOf="@id/kuraName"
+            app:layout_constraintStart_toEndOf="@id/kuraName"
+            tools:text="都道府県"/>
+
+        <TextView
+            android:id="@+id/sakeName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:scrollbars="horizontal"
+            style="@style/TextStyle.XLarge.Bold"
+            android:text="@{viewModel.sakeName}"
+            app:layout_constraintTop_toBottomOf="@id/kuraName"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="おさけのなまえ"/>
+
+        <TextView
+            android:id="@+id/sakeRank"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            style="@style/TextStyle.Mid.Bold"
+            android:text="@{viewModel.sakeRank}"
+            app:layout_constraintTop_toBottomOf="@id/sakeName"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="純米大吟醸"/>
+
+        <TextView
+            android:id="@+id/sakeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            style="@style/TextStyle.Mid"
+            android:text="@{viewModel.sakeType}"
+            app:layout_constraintTop_toBottomOf="@id/sakeRank"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="生,原酒,にごり,発泡"/>
+
+        <ImageView
+            android:id="@+id/sakePicture"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/no_picture"
+            app:layout_constraintTop_toBottomOf="@id/sakeType"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/starPointLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            style="@style/TextStyle.Mid.Bold"
+            android:text="@string/sake_detail_info_star_point_label"
+            app:layout_constraintTop_toTopOf="@id/sakePicture"
+            app:layout_constraintStart_toEndOf="@id/sakePicture"/>
+
+        <TextView
+            android:id="@+id/starPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:gravity="end"
+            style="@style/TextStyle.Large"
+            android:text="@{viewModel.starPoint}"
+            app:layout_constraintTop_toTopOf="@id/sakePicture"
+            app:layout_constraintStart_toEndOf="@id/starPointLabel"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/juicyPointLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            style="@style/TextStyle.Small.Bold"
+            android:text="@string/sake_detail_info_juicy_point_label"
+            app:layout_constraintTop_toBottomOf="@id/starPointLabel"
+            app:layout_constraintStart_toStartOf="@id/starPointLabel"/>
+
+        <TextView
+            android:id="@+id/juicyPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="end"
+            style="@style/TextStyle.Mid"
+            android:text="@{viewModel.juicyPoint}"
+            app:layout_constraintTop_toTopOf="@id/juicyPointLabel"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/sweetPointLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            style="@style/TextStyle.Small.Bold"
+            android:text="@string/sake_detail_info_sweet_point_label"
+            app:layout_constraintTop_toBottomOf="@id/juicyPointLabel"
+            app:layout_constraintStart_toStartOf="@id/juicyPointLabel"/>
+
+        <TextView
+            android:id="@+id/sweetPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="end"
+            style="@style/TextStyle.Mid"
+            android:text="@{viewModel.sweetPoint}"
+            app:layout_constraintTop_toTopOf="@id/sweetPointLabel"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/richPointLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            style="@style/TextStyle.Small.Bold"
+            android:text="@string/sake_detail_info_rich_point_label"
+            app:layout_constraintTop_toBottomOf="@id/sweetPointLabel"
+            app:layout_constraintStart_toStartOf="@id/sweetPointLabel"/>
+
+        <TextView
+            android:id="@+id/richPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="end"
+            style="@style/TextStyle.Mid"
+            android:text="@{viewModel.richPoint}"
+            app:layout_constraintTop_toTopOf="@id/richPointLabel"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/scentPointLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            style="@style/TextStyle.Small.Bold"
+            android:text="@string/sake_detail_info_scent_point_label"
+            app:layout_constraintTop_toBottomOf="@id/richPointLabel"
+            app:layout_constraintStart_toStartOf="@id/richPointLabel"/>
+
+        <TextView
+            android:id="@+id/scentPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="end"
+            style="@style/TextStyle.Mid"
+            android:text="@{viewModel.scentPoint}"
+            app:layout_constraintTop_toTopOf="@id/scentPointLabel"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/memo"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            android:text="@{viewModel.memo}"
+            style="@style/TextStyle.Large"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@id/sakePicture"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/text_background"/>
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@{viewModel.place}"
+            style="@style/TextStyle.Mid.Bold"
+            android:scrollbars="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/memo"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="酒の陣2023" />
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            style="@style/ButtonStyle.NormalButton"
+            android:text="@string/sake_detail_info_edit_button_label"
+            app:layout_constraintTop_toBottomOf="@id/place"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/deleteButton"/>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            style="@style/ButtonStyle.WarningButton"
+            android:text="@string/sake_detail_info_delete_button_label"
+            app:layout_constraintTop_toBottomOf="@id/place"
+            app:layout_constraintStart_toEndOf="@id/editButton"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

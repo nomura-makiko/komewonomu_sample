@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="true">
+        <layer-list>
+            <item
+                android:width="150dp"
+                android:height="150dp"
+                android:gravity="center">
+                <nine-patch android:src="@drawable/dl020_button_focused"/>
+            </item>
+            <item
+                android:width="120dp"
+                android:height="120dp"
+                android:gravity="bottom|start">
+                <bitmap
+                    android:src="@drawable/book_note_empty"
+                    android:tint="#88BB7722"
+                    android:tintMode="src_atop"/>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_enabled="false">
+        <layer-list>
+            <item
+                android:width="150dp"
+                android:height="150dp"
+                android:gravity="center">
+                <nine-patch android:src="@drawable/dl020_button_disabled"/>
+            </item>
+            <item
+                android:width="120dp"
+                android:height="120dp"
+                android:gravity="bottom|start">
+                <bitmap
+                    android:src="@drawable/book_note_empty"
+                    android:tint="#88EEEEEE"
+                    android:tintMode="src_atop"/>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item
+                android:width="150dp"
+                android:height="150dp"
+                android:gravity="center">
+                <nine-patch android:src="@drawable/dl020_button_pressed"/>
+            </item>
+            <item
+                android:width="120dp"
+                android:height="120dp"
+                android:gravity="bottom|start">
+                <bitmap
+                    android:src="@drawable/book_note_empty"
+                    android:tint="#88995500"
+                    android:tintMode="src_atop"/>
+            </item>
+        </layer-list>
+    </item>
+</selector>

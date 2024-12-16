@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- TODO: タイトル仮置き -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:gravity="center_horizontal"
+        android:text="飲んだお酒たち"
+        android:fontFamily="@font/title_font"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- フィルタメニュー -->
+    <!-- TODO: 未実装 -->
+    <TextView
+        android:id="@+id/starPointLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        style="@style/TextStyle.Mid"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/starPointFilterButton"
+        android:visibility="invisible"
+        android:text="@string/sake_list_button_star_point_label"/>
+
+    <!-- TODO: 未実装 -->
+    <Button
+        android:id="@+id/starPointFilterButton"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        style="@style/ButtonStyle.NormalButton"
+        app:layout_constraintTop_toTopOf="@id/starPointLabel"
+        app:layout_constraintStart_toEndOf="@id/starPointLabel"
+        android:enabled="false"
+        android:visibility="invisible"
+        tools:text="*★５"/>
+
+    <!-- タブ部 -->
+    <Button
+        android:id="@+id/sakeChartTab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintTop_toBottomOf="@id/starPointFilterButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sakeListTab"
+        android:text="@string/sake_list_tab_name_chart" />
+    <Button
+        android:id="@+id/sakeListTab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        app:layout_constraintTop_toBottomOf="@id/starPointFilterButton"
+        app:layout_constraintStart_toEndOf="@id/sakeChartTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/sake_list_tab_name_list" />
+
+    <!-- 酒情報表示 -->
+    <com.github.mikephil.charting.charts.BubbleChart
+        android:id="@+id/sakeInfoChartView"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/sakeListTab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/sakeInfoListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:foregroundGravity="top"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintTop_toBottomOf="@id/sakeListTab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

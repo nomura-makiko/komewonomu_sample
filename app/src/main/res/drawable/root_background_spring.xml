@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:src="@drawable/spring" />
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" />
+            <gradient android:angle="270" android:startColor="#FFFFFFFF" android:endColor="#88FFFFFF"
+                android:centerX="1.0" android:centerY="0.0"
+                android:gradientRadius="800dp" android:type="radial" />
+        </shape>
+    </item>
+</layer-list>

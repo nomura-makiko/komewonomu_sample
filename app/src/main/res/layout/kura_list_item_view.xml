@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+    <data>
+        <variable
+            name="item"
+            type="com.aquajusmin.sakewonomu.viewitems.viewdatas.KuraInfoCardUiData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="2dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/kuraName"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:text="@{item.kuraName}"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/TextStyle.Mid.Bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/prefecture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="高千代酒造"/>
+
+        <TextView
+            android:id="@+id/prefecture"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:text="@{item.prefectures}"
+            style="@style/TextStyle.Mid"
+            android:gravity="center_vertical|end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="（新潟県）"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
